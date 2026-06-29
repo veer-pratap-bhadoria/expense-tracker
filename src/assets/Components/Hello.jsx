@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Hello() {
-    // const muthDays = ["monday", "wednesday", "thursday", "friday", "sunday"]
+    //removed comment slkfja;sj
     const person = [
         {
             name: "robert",
