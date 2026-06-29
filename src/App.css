@@ -1,0 +1,73 @@
+html, body{
+display: flex;
+justify-content: center;
+font-family: -apple-system, BlinkMacSystemFont,  sans-serif;
+}
+
+.app-container {
+  width: 600px;
+  background: whitesmoke;
+  border-radius: 12px;
+}
+
+.app-container h1{
+  text-align: center;
+  cursor: default;
+}
+
+.expense-form{
+  display: flex;
+  justify-content: space-around;
+}
+
+.expense-form input{
+  width: 200px;
+  height: 20px;
+}
+
+.expense-form button{
+background: grey;
+font-weight: bold;
+cursor: pointer;
+}
+
+.total{
+  margin-left: 15px;
+  cursor: default;
+}
+
+.expense-list{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.expense-item{
+  display: flex;
+  justify-content: space-around;
+  cursor: default;
+  width: 500px;
+  height: 20px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+
+}
+
+.dlt-bttn{
+  border: none;
+  font-size: 12px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.no-expense{
+  text-align: center;
+  color: #888;
+}
+
+.raand{
+  display: flex;
+  flex-direction: column;
+}
