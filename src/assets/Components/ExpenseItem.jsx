@@ -1,4 +1,3 @@
-
 function ExpenseItem({ item, onDelete }) {
   return (
     <div className='expense-item'>

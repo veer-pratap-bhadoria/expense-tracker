@@ -7,8 +7,14 @@ import Hello from './assets/Components/Hello'
 
 
 function App() {
-const [ expenses, setExpenses] = useState([]) //[1,2,3,4]
+const [ expenses, setExpenses] = useState(() => {
+const saved = localStorage.getItem("expenses")
+return saved ? JSON.parse(saved) : [];
+}) //[1,2,3,4]
 
+useEffect(() =>{
+  localStorage.setItem("expenses", JSON.stringify(expenses))
+}, [expenses])
 
 const addExpense = (expense) => {
      setExpenses(
@@ -18,7 +24,7 @@ const addExpense = (expense) => {
 }
 
 const deleteExpense = (id) => {
-   
+   setExpenses((prev) => prev.filter((item) => item.id != id))
 }
 
 // const countExpenses = expenses.reduce((sum, veer) => sum + veer.amount, 0)
