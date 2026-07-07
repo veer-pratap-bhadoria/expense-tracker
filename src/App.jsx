@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import ExpenseForm from './assets/Components/ExpenseForm'
 import ExpenseList from './assets/Components/ExpenseList'
-import Hello from './assets/Components/Hello'
 
 
 
@@ -24,7 +23,7 @@ const addExpense = (expense) => {
 }
 
 const deleteExpense = (id) => {
-   setExpenses((prev) => prev.filter((item) => item.id != id))
+   setExpenses((prev) => prev.filter((item) => item.id != id) )
 }
 
 // const countExpenses = expenses.reduce((sum, veer) => sum + veer.amount, 0)
@@ -43,7 +42,6 @@ const countExpenses = expenses.map((item)=>{
 
       <ExpenseList expenses={expenses} onDelete={deleteExpense} />
 
-    <Hello />
     </div>
   )
 }
